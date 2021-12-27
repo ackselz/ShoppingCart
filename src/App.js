@@ -74,14 +74,14 @@ function App() {
       }
 
   return (
-    <BrowserRouter basename="/ShoppingCart">
+    <BrowserRouter>
     <Nav />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/shop" element={<Shop inventory={inventory} addToCart={addToCart}/> }/>
-        <Route path="/shop/item/:id" element={<Item cart={cart} addToCart={addToCart}/>}/>
-        <Route path="/shop/category/:id" element={<Category addToCart={addToCart}/>}/>
-        <Route path="/cart" element={<Cart inventory={inventory} cart={cart} handleRemoveFromCart={handleRemoveFromCart} handleChangeCartQuantity={handleChangeCartQuantity}/>}/>
+        <Route path="/ShoppingCart/" element={<Home />}/>
+        <Route path="/ShoppingCart/shop" element={<Shop inventory={inventory} addToCart={addToCart}/> }/>
+        <Route path="/ShoppingCart/shop/item/:id" element={<Item cart={cart} addToCart={addToCart}/>}/>
+        <Route path="/ShoppingCart/shop/category/:id" element={<Category addToCart={addToCart}/>}/>
+        <Route path="/ShoppingCart/cart" element={<Cart inventory={inventory} cart={cart} handleRemoveFromCart={handleRemoveFromCart} handleChangeCartQuantity={handleChangeCartQuantity}/>}/>
       </Routes>
     </BrowserRouter>
   );
