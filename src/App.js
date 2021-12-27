@@ -74,7 +74,7 @@ function App() {
       }
 
   return (
-    <HashRouter basename="/ShoppingCart">
+    <HashRouter>
     <Nav />
       <Routes>
         <Route path="/" element={<Home />}/>
