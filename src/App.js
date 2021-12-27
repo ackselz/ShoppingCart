@@ -74,7 +74,7 @@ function App() {
       }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ShoppingCart">
     <Nav />
       <Routes>
         <Route path="/" element={<Home />}/>
