@@ -6,7 +6,7 @@ import Item from './components/Item.js';
 import Cart from './components/Cart.js';
 import Category from './components/Category.js';
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -74,16 +74,16 @@ function App() {
       }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <Nav />
       <Routes>
-        <Route path="/ShoppingCart/" element={<Home />}/>
-        <Route path="/ShoppingCart/shop" element={<Shop inventory={inventory} addToCart={addToCart}/> }/>
-        <Route path="/ShoppingCart/shop/item/:id" element={<Item cart={cart} addToCart={addToCart}/>}/>
-        <Route path="/ShoppingCart/shop/category/:id" element={<Category addToCart={addToCart}/>}/>
-        <Route path="/ShoppingCart/cart" element={<Cart inventory={inventory} cart={cart} handleRemoveFromCart={handleRemoveFromCart} handleChangeCartQuantity={handleChangeCartQuantity}/>}/>
+        <Route path="/" element={<Home />}/>
+        <Route path="/shop" element={<Shop inventory={inventory} addToCart={addToCart}/> }/>
+        <Route path="/shop/item/:id" element={<Item cart={cart} addToCart={addToCart}/>}/>
+        <Route path="/shop/category/:id" element={<Category addToCart={addToCart}/>}/>
+        <Route path="/cart" element={<Cart inventory={inventory} cart={cart} handleRemoveFromCart={handleRemoveFromCart} handleChangeCartQuantity={handleChangeCartQuantity}/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
